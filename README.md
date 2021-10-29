@@ -27,7 +27,7 @@ The goals of this session are to (1) recap the function and functioning of (web)
 
 ## License
 
-The material in this repository is made available under the [MIT](http://opensource.org/licenses/mit-license.php) and [Trestle Technology, LLC Licenses](https://www.rplumber.io/LICENSE-text.html#license). 
+The material in this repository is made available under the [MIT](http://opensource.org/licenses/mit-license.php) and [Trestle Technology, LLC](https://www.rplumber.io/LICENSE-text.html#license) licenses. 
 
 
 ## Statement of contributions
