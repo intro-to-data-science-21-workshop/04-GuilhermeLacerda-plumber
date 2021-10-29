@@ -1,0 +1,76 @@
+---
+title: "Creating web APIs with Plumber"
+author: "Guilherme Lacerda & Hyebin Hong"
+date: "11/04/2021"
+output: html_document
+keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# API
+## What is an API and Web API?
+
+* API stands for Application Programming and Web API is an API over the web
+* functions as a mediator between clients and web services
+* typically uses HTTP protocol for request messages and provides responses in the form of an XML or JSON file
+
+## Some Web API features
+* supports CRUD operations, which correspond to HTTP methods GET,POST,PUT and DELETE
+* responses have headers, HTTP status code and message body
+* supports multiple text formats such as XML, JSON, and etc. 
+
+## Why is a Web API useful?
+* can be called and consumed by any kind of application such as mobile app, desktop app, and etc. 
+* not limited to use specific interface in order to communicate with users
+* uses low bandwidth
+* open source
+
+# Plumber
+## create APIs with R
+‘Plumber’ uses annotations which are special comments(#*) and tags(e.g. @apiTitle) to turn any arbitrary R functions into API endpoints. 
+
+Let’s walk through the various annotations that are important to create an API! 
+ 
+## Plumber package functioning
+```{r, message=F, comment=F}
+#* @filter logger
+function(req){
+  cat(as.character(Sys.time()), "-",
+    req$REQUEST_METHOD, req$PATH_INFO, "-",
+    req$HTTP_USER_AGENT, "@", req$REMOTE_ADDR, "\n")
+  plumber::forward()
+}
+
+#* @get /dyn/<name:str>/<age:[int]>/route
+#* @serializer text
+#* @parser none
+#* @response 200 A sentence
+function(name, age) {
+  sprintf("%s is %i years old", name, age)
+}
+```
+
+* Filters: used to handle (and eventually modify) incoming requests.
+  + Typically, a request will pass through every filter before going to the endpoint (the @preempt tag opts specific filters out).
+  + Common filter uses are collecting information about incoming requests and authentication.
+
+
+* Parser: determine how Plumber parses (i.e., analyzes a string or text into logical syntactic components) the incoming request body.
+  + By default Plumber parses the request body as JavaScript Object Notation (JSON).
+  + Other parsers, including custom parsers, are identified using the @parser [parser name] tag.
+  + All registered parsers can be viewed with registered_parsers().
+
+* Endpoint: define the R code that is executed in response to incoming requests.
+  + Correspond to HTTP methods and respond to incoming requests that match the defined method.
+  + Methods: @get, @post, @put, @delete, ...
+
+* Serializer: determine how to return results to the client.
+  + Default serializes the R object into JSON, but custom serializers can be applied through @serializer [serializer name] tag.
+  + E.g., #* @serializer csv
+
+* Interface and programming
+
+* Deployment: There are several ways to deploy APIs developed by Plumber. RStudio Connect is one of the easiest ways, allowing push-button publishing from the RStudio IDE. 
