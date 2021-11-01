@@ -15,7 +15,7 @@
 
 <title>Creating web APIs with Plumber</title>
 
-<script src="Pumbler-presentation_files/header-attrs-2.7/header-attrs.js"></script>
+<script src="Pumbler-presentation_files/header-attrs-2.8/header-attrs.js"></script>
 <script src="Pumbler-presentation_files/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="Pumbler-presentation_files/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
@@ -218,12 +218,12 @@ div.tocify {
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -243,14 +243,14 @@ div.tocify {
 <h1>API</h1>
 <div id="what-is-an-api-and-web-api" class="section level2">
 <h2>What is an API and Web API?</h2>
-<p><img src="api.png" width="80%" height="40%" style="display: block; margin: auto;" /></p>
+<p><img src="pics/api.png" width="80%" height="40%" style="display: block; margin: auto;" /></p>
 <ul>
 <li>API stands for Application Programming Interfaces and Web API is an API over the web</li>
 <li>functions as a mediator between clients and web services</li>
 <li>typically uses HTTP protocol for request messages and provides responses in the form of an XML or JSON file</li>
 </ul>
 <div class="figure" style="text-align: center">
-<img src="weather.png" alt="\label{fig:figs}API use example" width="80%" height="50%" />
+<img src="pics/weather.png" alt="\label{fig:figs}API use example" width="80%" height="50%" />
 <p class="caption">
 API use example
 </p>
@@ -261,13 +261,13 @@ API use example
 <ul>
 <li>supports CRUD operations, which correspond to HTTP methods GET,POST,PUT and DELETE</li>
 <li>responses have headers, HTTP status code and message body</li>
-<li>supports multiple text formats such as XML, JSON, and etc. <img src="crud.png" width="80%" height="40%" style="display: block; margin: auto;" /></li>
+<li>supports multiple text formats such as XML, JSON, and etc. <img src="pics/crud.png" width="80%" height="40%" style="display: block; margin: auto;" /></li>
 </ul>
 </div>
 <div id="http-request-and-response" class="section level2">
 <h2>HTTP Request and Response</h2>
 <div class="figure" style="text-align: center">
-<img src="http.png" alt="\label{fig:figs}Source: Plumber Cheatsheet" width="60%" height="30%" />
+<img src="pics/http.png" alt="\label{fig:figs}Source: Plumber Cheatsheet" width="60%" height="30%" />
 <p class="caption">
 Source: Plumber Cheatsheet
 </p>
@@ -308,7 +308,7 @@ Source: Plumber Cheatsheet
 </div>
 </div>
 <div id="plumber" class="section level1">
-<h1>Plumber 👨‍🔧</h1>
+<h1>Plumber 👩‍🔧</h1>
 <div id="create-apis-with-r" class="section level2">
 <h2>create APIs with R</h2>
 <p>‘Plumber’ uses “annotations” which are special comments (#*) and tags (e.g. <span class="citation">@apiTitle</span>) to turn any arbitrary R functions into API endpoints.</p>
@@ -335,7 +335,7 @@ Source: Plumber Cheatsheet
 </div>
 <div id="plumber-package-functioning" class="section level2">
 <h2>Plumber package functioning</h2>
-<p><img src="screenshot.png" width="50%" height="20%" style="display: block; margin: auto;" /></p>
+<p><img src="pics/screenshot.png" width="50%" height="20%" style="display: block; margin: auto;" /></p>
 <div id="filters" class="section level4">
 <h4>Filters</h4>
 <p>Filters are used to handle (and eventually modify) incoming requests.</p>
@@ -385,7 +385,7 @@ Source: Plumber Cheatsheet
 </ul>
 <br>
 <div align="center">
-<p><img src="recording.gif" height=400></p>
+<p><img src="pics/recording.gif" height=400></p>
 </div>
 </div>
 <div id="deployment" class="section level4">
@@ -408,7 +408,7 @@ Source: Plumber Cheatsheet
 </div>
 <div id="exercise" class="section level1">
 <h1>Exercise 🏋</h1>
-<p>Now let’s move into an exercise using our friends the Palmer penguins! If you haven’t downloaded the material yet, access it in this <a href="https://github.com/intro-to-data-science-21-workshop/04-GuilhermeLacerda-plumber">GitHub repo</a>! <img src="penguins.png" width="60%" height="30%" style="display: block; margin: auto;" /></p>
+<p>Now let’s move into an exercise using our friends the Palmer penguins! If you haven’t downloaded the material yet, access it in this <a href="https://github.com/intro-to-data-science-21-workshop/04-GuilhermeLacerda-plumber">GitHub repo</a>! <img src="pics/penguins.png" width="60%" height="30%" style="display: block; margin: auto;" /></p>
 </div>
 
 

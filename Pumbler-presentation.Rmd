@@ -16,7 +16,7 @@ output:
   pdf_document:
     toc: yes
     toc_depth: '3'
-keep_md: yes
+keep_md: true
 ---
 
 ```{r setup, include=FALSE}
@@ -28,7 +28,7 @@ library(knitr)
 # API
 ## What is an API and Web API?
 ```{r, fig.align='center', echo=F, out.width = "80%", out.height= "40%"}
-  knitr::include_graphics("api.png")
+  knitr::include_graphics("pics/api.png")
 ```
 
 * API stands for Application Programming Interfaces and Web API is an API over the web
@@ -36,7 +36,7 @@ library(knitr)
 * typically uses HTTP protocol for request messages and provides responses in the form of an XML or JSON file
 
 ```{r figs, fig.align='center',fig.cap="\\label{fig:figs}API use example", echo=F, out.width = "80%", out.height= "50%"}
-  knitr::include_graphics("weather.png")
+  knitr::include_graphics("pics/weather.png")
 ```
 
 ## Some Web API features
@@ -44,12 +44,12 @@ library(knitr)
 * responses have headers, HTTP status code and message body
 * supports multiple text formats such as XML, JSON, and etc. 
 ```{r, fig.align='center', echo=F, out.width = "80%", out.height= "40%"}
-  knitr::include_graphics("crud.png")
+  knitr::include_graphics("pics/crud.png")
 ```
 
 ## HTTP Request and Response 
 ```{r, fig.align='center', echo=F, out.width = "60%", out.height= "30%",fig.cap="\\label{fig:figs}Source: Plumber Cheatsheet"}
-  knitr::include_graphics("http.png")
+  knitr::include_graphics("pics/http.png")
 ```
 
 * HTTP methods
@@ -107,7 +107,7 @@ Any annotation line in Plumber must start (be *decorated*) with #*. The line of 
  
 ## Plumber package functioning
 ```{r, fig.align='center', echo=F, out.width = "50%", out.height= "20%"}
-  knitr::include_graphics("screenshot.png")
+  knitr::include_graphics("pics/screenshot.png")
 ```
 
 #### Filters
@@ -153,7 +153,7 @@ Serializers determine how to return results to the client.
 
 <br>
 <div align="center">
-<img src="recording.gif" height=400>
+<img src="pics/recording.gif" height=400>
 </div>
 
 
@@ -181,5 +181,5 @@ While Plumber makes setting up an API in R a feasible endeavor, keeping your per
 Now let’s move into an exercise using our friends the Palmer penguins!
 If you haven’t downloaded the material yet, access it in this [GitHub repo](https://github.com/intro-to-data-science-21-workshop/04-GuilhermeLacerda-plumber)!
 ```{r, fig.align='center', echo=F, out.width = "60%", out.height= "30%"}
-  knitr::include_graphics("penguins.png")
+  knitr::include_graphics("pics/penguins.png")
 ```
