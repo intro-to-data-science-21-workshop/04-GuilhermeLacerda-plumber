@@ -37,3 +37,4 @@ status <- function(msg ="") {
 function(req, res) {
   predict(model_api, new_data = simulated_humboldt, type = "prob")
 }
+
